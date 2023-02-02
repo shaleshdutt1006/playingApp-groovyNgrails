@@ -24,8 +24,8 @@
                     <g:if test="${flash.message}">
                     <div class="message" role="status">${flash.message}</div>
                     </g:if>
-                    <f:display bean="team"  />
-                    
+                    <f:display bean="team"  except="logo"/>
+                    <g:img uri="${team?.logo}"/>                    
                     <g:form resource="${this.team}" method="DELETE">
                         <fieldset class="buttons">
                             <g:link class="edit" action="edit" resource="${this.team}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
